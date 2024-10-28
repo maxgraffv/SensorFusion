@@ -34,11 +34,23 @@ a
 \end{bmatrix}
 $$
 
-x - position
-v - velocity
-a - acceleration
+x - position  
+v - velocity  
+a - acceleration  
 
+<br><br>
 
+**P - Error Covariance Matrix**  
+Reflects the uncertainty in our current estimate of the state.  
+Stores how much we trust in the current estimate for each part of the state.  
+
+$$
+P = \begin{bmatrix}
+1000 & 0 & 0\\
+0 & 1000 & 0\\
+0 & 0 & 1000
+\end{bmatrix}
+$$
 
 
 
