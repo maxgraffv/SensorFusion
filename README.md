@@ -111,7 +111,7 @@ If measuring only acceleration:
 
 $$
 z = \begin{bmatrix}
-a_measured
+a_{measured}
 \end{bmatrix}
 $$
 
@@ -129,10 +129,42 @@ $$
 
 So that when multiplied, it extracts only the acceleration component  
 
+<br><br>
 
 **R - Measurement Noise Covariance Matrix**  
 describes how uncertain we are about the measurement.  
-If the sensor is noisy, R should be large, leading the filter to weigh the predicted state more heavily than the measurement, for instance
+If the sensor is noisy, R should be large, leading the filter to weigh the predicted state more heavily than the measurement, for instance:  
+
+$$
+R = \begin{bmatrix}
+\sigma_{measurement}^2
+\end{bmatrix}
+$$
+
+where $\sigma$ is the standard deviation of the sensor noise.  
+
+<br><br>
+
+**Innovation**  
+the difference between the actual measurement **z** and the expected measurement  
+
+$$
+y = z - H*x_{pred}
+$$
+
+<br><br>
+
+**S - Innovation Covariance**  
+Mesures the uncertainty of this innovation:
+
+$$
+S = H * P_{pred} * H^T + R
+$$
+
+A high S value indicates high uncertainty, causing the Kalman gain to reduce, meaining less correction applied to the state.  
+
+**K - Kalman Gain**
+
 
 
 
