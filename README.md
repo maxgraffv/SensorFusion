@@ -25,6 +25,7 @@ Because the measurements are often noisy and incomplete, the filter balances two
 
 **X - State Vector**  
 holds values that will be estimated.  
+
 $$
 X = \begin{bmatrix}
 x\\
@@ -32,6 +33,7 @@ v\\
 a
 \end{bmatrix}
 $$
+
 x - position
 v - velocity
 a - acceleration
