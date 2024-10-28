@@ -31,10 +31,10 @@ x\\
 v\\
 a
 \end{bmatrix}
+$$
 x - position
 v - velocity
 a - acceleration
-$$
 
 
 
