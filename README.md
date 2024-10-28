@@ -90,6 +90,7 @@ Q = \begin{bmatrix}
 $$
 
 Where
+
 $$
 \sigma
 $$
