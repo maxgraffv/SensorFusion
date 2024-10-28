@@ -12,11 +12,12 @@ Sensor Fusion Algorithms description, explanation and examples
 Kalman Filter is an algorithm used for tracking and predicting the dynamic state of the system, based on uncertain and noisy measurements.  
 <br>
 
-X =
+X = 
+
 $$
 \begin{bmatrix}
-x \\
-v \\
+x\\
+v\\
 a
 \end{bmatrix}
 $$
