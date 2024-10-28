@@ -90,7 +90,56 @@ Q = \begin{bmatrix}
 $$
 
 
-Where  $\sigma$  represents expected deviations in postion, velocity and acceleration
+Where  $\sigma$  represents expected deviations in postion, velocity and acceleration.
+
+The Predicted error covariance becomes:
+
+$$
+P = F * P * F^T + Q
+$$
+
+This equation means: we predict the uncertainty in our state estimate, by projecting the previous uncertainty forward through F and adding the process noise Q
+
+<br><br>
+
+#### Measurement Update (Correction)  
+After predicting the next state, we update our estimate based on new the new measurement from the sensor.
+
+**z - Measurement Vector**  
+z holds the sensor's reading.  
+If measuring only acceleration:
+
+$$
+z = \begin{bmatrix}
+a_measured
+\end{bmatrix}
+$$
+
+<br><br>
+
+**H - Measurement Matrix**
+maps the state vector X to what we expect to observe from the sensor.  
+If me only measured acceleration:  
+
+$$
+H = \begin{bmatrix}
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+So that when multiplied, it extracts only the acceleration component  
+
+
+**R - Measurement Noise Covariance Matrix**  
+describes how uncertain we are about the measurement.  
+If the sensor is noisy, R should be large, leading the filter to weigh the predicted state more heavily than the measurement, for instance
+
+
+
+
+
+
+
 
 
 ### Simple Example
