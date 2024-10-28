@@ -70,6 +70,7 @@ F = \begin{bmatrix}
 0 & 0 & 1
 \end{bmatrix}
 $$
+
 <br>
 Multiplying F by X projects the current state forward, estimating the next state.
 
@@ -82,9 +83,9 @@ It assumes that even though we have a mathematical model for the system, there m
 
 $$
 Q = \begin{bmatrix}
-\Ro_x & 0 & 0\\
-0 & \Ro_v & 0\\
-0 & 0 & \Ro_a
+\sigma_x & 0 & 0\\
+0 & \sigma_v & 0\\
+0 & 0 & \sigma_a
 \end{bmatrix}
 $$
 
