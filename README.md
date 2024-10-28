@@ -89,4 +89,11 @@ Q = \begin{bmatrix}
 \end{bmatrix}
 $$
 
+Where
+$$
+\sigma
+$$
+
+represents expected deviations in postion, velocity and acceleration
+
 ### Simple Example
