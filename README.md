@@ -200,7 +200,7 @@ $$
 P = (I - K * H) * P_{pred}
 $$
 
-    This sep reduces the uncertainty in our estimate based on the new information from the measurement
+This sep reduces the uncertainty in our estimate based on the new information from the measurement
 
 
 
