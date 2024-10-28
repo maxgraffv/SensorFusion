@@ -72,6 +72,11 @@ F = \begin{bmatrix}
 $$
 
 <br>
+
+$$
+x_{pred} = F * x
+$$
+
 Multiplying F by X projects the current state forward, estimating the next state.
 
 <br><br>
@@ -163,7 +168,40 @@ $$
 
 A high S value indicates high uncertainty, causing the Kalman gain to reduce, meaining less correction applied to the state.  
 
-**K - Kalman Gain**
+<br><br>
+
+**K - Kalman Gain**  
+determines how much weight to give the measurement relative to the prediction:  
+
+$$
+K = P_{pred} * H^T * S^{-1}
+$$
+
+- If K is large - the filter trusts the measurement more than the prediction
+- If K is small - the filter trusts the prediction more than the measurement
+
+<br><br>
+
+**Update the State Estimate**  
+update the state estimate
+
+$$
+x = x_{pred} + K*y
+$$
+
+This correction combines the prediction and measurement to get an optimal estimate
+
+<br><br>
+
+**Update the Error Covariance**  
+Updated to reflect the reduced uncertainty after the emasurement update
+
+$$
+P = (I - K * H) * P_{pred}
+$$
+
+    This sep reduces the uncertainty in our estimate based on the new information from the measurement
+
 
 
 
