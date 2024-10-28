@@ -65,8 +65,8 @@ Describes how each part of the state influences the next state.
 
 $$
 F = \begin{bmatrix}
-1 & \Delta t & \frac{ (\Delta t)^2 }{2} \\
-0 & 1 & \Delta t \\
+1 & \Delta{t} & \frac{ (\Delta{t})^2 }{2} \\
+0 & 1 & \Delta{t} \\
 0 & 0 & 1
 \end{bmatrix}
 ### Simple Example
