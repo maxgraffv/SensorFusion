@@ -13,7 +13,6 @@ Kalman Filter is an algorithm used for tracking and predicting the dynamic state
 <br>
 
 X = 
-
 $$
 \begin{bmatrix}
 x\\
