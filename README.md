@@ -83,9 +83,9 @@ It assumes that even though we have a mathematical model for the system, there m
 
 $$
 Q = \begin{bmatrix}
-\sigma_x & 0 & 0\\
-0 & \sigma_v & 0\\
-0 & 0 & \sigma_a
+\sigma_x^2 & 0 & 0\\
+0 & \sigma_v^2 & 0\\
+0 & 0 & \sigma_a^2
 \end{bmatrix}
 $$
 
