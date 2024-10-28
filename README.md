@@ -48,11 +48,25 @@ $$
 P = \begin{bmatrix}
 1000 & 0 & 0\\
 0 & 1000 & 0\\
-0 & 0 & 1000
+0 & 0 & 10
 \end{bmatrix}
 $$
 
+Higher uncertainty for position and velocity, but lower for acceleration  
 
+<br><br>
 
+#### Prediction  
+Prediction uses the system model to estimate the next state based on the current state.  
+This involves two main components.  
 
+**F - State Transition Matrix**  
+Describes how each part of the state influences the next state.  
+
+$$
+F = \begin{bmatrix}
+1 & \Delta t & \frac{ (\Delta t)^2 }{2} \\
+0 & 1 & \Delta t \\
+0 & 0 & 1
+\end{bmatrix}
 ### Simple Example
