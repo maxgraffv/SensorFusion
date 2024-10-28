@@ -70,5 +70,22 @@ F = \begin{bmatrix}
 0 & 0 & 1
 \end{bmatrix}
 $$
+<br>
+Multiplying F by X projects the current state forward, estimating the next state.
+
+<br><br>
+
+**Q - Process Noise Covariance Matrix**  
+Accounts for uncertainty in the model.  
+It assumes that even though we have a mathematical model for the system, there might still be random variations (small changes not captured ye model, etc.)  
+
+
+$$
+Q = \begin{bmatrix}
+\Ro_x & 0 & 0\\
+0 & \Ro_v & 0\\
+0 & 0 & \Ro_a
+\end{bmatrix}
+$$
 
 ### Simple Example
