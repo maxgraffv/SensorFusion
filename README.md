@@ -16,10 +16,12 @@ Kalman Filter is an algorithm used for tracking and predicting the dynamic state
 #### PREDICTION
 
 $$
-currentEstimate = LastEstimate + expectedChange
+currentEstimate = lastEstimate + expectedChange
+X_{predicted} = F * X
 $$
 $$
 currentUncertainty = lastUncertainty + processNoise
+P_{redicted} = P + Q
 $$
 
 <br>
@@ -31,12 +33,26 @@ $$
 KalmanGain = \frac{currentUncertainty}{currentUncertainty + measurementNoise}
 $$
 
+Simplified version
+
+$$
+K = \frac{P_{predicted}}{P_{predicted} + R}
+$$
+
+General version
+
+$$
+K = P_{prediction} * H^T * (H * P_{prediction} * H^T + R)^{-1}
+$$
+
 $$
 currentEstimate = currentEstimate + (KalmanGain * (measurement - currentEstimate))
+X = X_{prediction} + K * y where y = Z - H * X_{prediction}
 $$
 
 $$
 currentUncertainty = (1-KalmanGain) * currentUncertainty
+P = (I - K * H) * P_{prediction}
 $$
 
 <br>
