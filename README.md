@@ -58,8 +58,17 @@ $$
 currentEstimate = currentEstimate + (KalmanGain * (measurement - currentEstimate))
 $$
 $$
-X = X_{prediction} + K * y \\\ where y = Z - H * X_{prediction}
+X = X_{prediction} + K * y 
 $$
+
+<br>
+where
+<br>
+
+$$
+y = Z - H * X_{prediction}
+$$
+
 
 $$
 currentUncertainty = (1-KalmanGain) * currentUncertainty
