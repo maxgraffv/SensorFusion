@@ -10,8 +10,52 @@ Sensor Fusion Algorithms description, explanation and examples
 ## Kalman Filter
 ### Overview
 Kalman Filter is an algorithm used for tracking and predicting the dynamic state of the system, based on uncertain and noisy measurements.  
-Below is a step by step guide  
 <br>
+<br>
+
+#### PREDICTION
+
+$$
+currentEstimate = LastEstimate + expectedChange
+$$
+$$
+currentUncertainty = lastUncertainty + processNoise
+$$
+
+<br>
+<br>
+
+#### UPDATE
+
+$$
+KalmanGain = \frac{currentUncertainty}{currentUncertainty + measurementNoise}
+$$
+
+$$
+currentEstimate = currentEstimate + (KalmanGain * (measurement - currentEstimate))
+$$
+
+$$
+currentUncertainty = (1-KalmanGain) * currentUncertainty
+$$
+
+<br>
+
+Here is where you read the filtered data from currentEstimate.  
+Then set the following
+<br>
+
+$$
+lastEstimate = currentEstimate
+$$
+
+$$
+lastUncertainty = currentUncertainty
+$$
+
+
+
+
 
 #### The Problem: Estimating the State
 A state - in kalman filter, includes variables we want to estimate (position, velocity, acceleration).  
