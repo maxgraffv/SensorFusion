@@ -58,7 +58,7 @@ $$
 currentEstimate = currentEstimate + (KalmanGain * (measurement - currentEstimate))
 $$
 $$
-X = X_{prediction} + K * y where y = Z - H * X_{prediction}
+X = X_{prediction} + K * y, \\ where y = Z - H * X_{prediction}
 $$
 
 $$
