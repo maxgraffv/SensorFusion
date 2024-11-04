@@ -21,6 +21,8 @@ $$
 $$
 X_{predicted} = F * X
 $$
+<br>
+<br>
 $$
 currentUncertainty = lastUncertainty + processNoise
 $$
@@ -49,6 +51,8 @@ $$
 K = P_{prediction} * H^T * (H * P_{prediction} * H^T + R)^{-1}
 $$
 
+<br>
+<br>
 $$
 currentEstimate = currentEstimate + (KalmanGain * (measurement - currentEstimate))
 $$
@@ -80,6 +84,8 @@ $$
 
 
 
+<br>
+<br>
 
 #### The Problem: Estimating the State
 A state - in kalman filter, includes variables we want to estimate (position, velocity, acceleration).  
