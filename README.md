@@ -20,7 +20,7 @@ currentEstimate = lastEstimate + expectedChange
 $$
 $$
 X_{predicted} = F * X
-$$
+$$   
 <br>
 <br>
 $$
