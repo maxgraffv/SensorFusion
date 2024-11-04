@@ -85,16 +85,15 @@ $$
 <br>
 
 Here is where you read the filtered data from currentEstimate.  
-Then set the following
+<br>
+At this point: 
 <br>
 
-$$
-lastEstimate = currentEstimate
-$$
+**lastEstimate becomes currentEstimate**
 
-$$
-lastUncertainty = currentUncertainty
-$$
+and  
+
+**lastUncertainty = currentUncertainty**
 
 
 
