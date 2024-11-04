@@ -53,6 +53,7 @@ $$
 
 <br>
 <br>
+
 $$
 currentEstimate = currentEstimate + (KalmanGain * (measurement - currentEstimate))
 $$
