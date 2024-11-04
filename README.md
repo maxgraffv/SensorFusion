@@ -54,6 +54,9 @@ $$
 <br>
 <br>
 
+Then we go to Estimate 
+<br>
+
 $$
 currentEstimate = currentEstimate + (KalmanGain * (measurement - currentEstimate))
 $$
@@ -69,6 +72,8 @@ $$
 y = Z - H * X_{prediction}
 $$
 
+<br>
+and Uncertainty calculation
 
 $$
 currentUncertainty = (1-KalmanGain) * currentUncertainty
